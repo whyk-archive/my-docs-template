@@ -3,21 +3,21 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
-    - master
+    - main
 
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@main
 
     - name: build
       uses: actions/setup-node@v2
       with:
         node-version: '10.16'
     - run: |
-        yarn
-        yarn build
+        npm ci
+        npm run build
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3.8.0
       with:

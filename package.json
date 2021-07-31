@@ -9,8 +9,8 @@
     "lint:js": "eslint --ext .ts --ignore-path .gitignore .",
     "lint": "run-p lint:*",
     "lintfix:html": "prettier --write src/index.html",
-    "lintfix:style": "yarn lint:style --fix",
-    "lintfix:js": "yarn lint:js --fix",
+    "lintfix:style": "npm run lint:style --fix",
+    "lintfix:js": "npm run lint:js --fix",
     "lintfix": "run-p lintfix:*"
   },
   "lint-staged": {
